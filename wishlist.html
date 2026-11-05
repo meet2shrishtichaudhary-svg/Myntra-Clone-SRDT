@@ -1,30 +1,38 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Wishlist | StyleKart</title>
+
     <link rel="stylesheet" href="wishlist.css">
     <script src="wishlist.js" defer></script>
 </head>
 <body>
 
     <header class="navbar">
-        <a href="index.html" class="logo">STYLEKART</a>
+        <a href="index.html" class="logo">style<span>kart.</span></a>
 
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="wishlist.html" class="active">Wishlist</a>
-            <a href="bag.html">Bag <span id="cartCount">0</span></a>
+            <a href="bag.html">Bag (<span id="cartCount">0</span>)</a>
         </nav>
     </header>
 
     <main class="wishlist-container">
+
         <section class="page-heading">
             <p class="eyebrow">YOUR PERSONAL COLLECTION</p>
-            <h1>My Wishlist <span id="wishlistCount">(0)</span></h1>
-            <p class="subtitle">Your favourite styles, all in one place.</p>
+
+            <h1>
+                My Wishlist
+                <span id="wishlistCount">(0)</span>
+            </h1>
+
+            <p class="subtitle">
+                Your favourite styles, all in one place.
+            </p>
         </section>
 
         <div id="wishlistMessage" class="wishlist-message" role="status"></div>
@@ -32,15 +40,23 @@
         <section
             id="wishlistProducts"
             class="product-grid"
-            aria-label="Wishlisted products"
-        ></section>
+            aria-label="Wishlisted products">
+        </section>
 
         <section id="emptyWishlist" class="empty-state" hidden>
             <div class="empty-heart">♡</div>
+
             <h2>Your wishlist is waiting</h2>
-            <p>Save the products you love and find them here anytime.</p>
-            <a href="index.html" class="shop-button">EXPLORE PRODUCTS</a>
+
+            <p>
+                Save the products you love and find them here anytime.
+            </p>
+
+            <a href="index.html" class="shop-button">
+                EXPLORE PRODUCTS
+            </a>
         </section>
+
     </main>
 
     <footer class="footer">

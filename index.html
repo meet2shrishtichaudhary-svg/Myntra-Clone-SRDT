@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StyleKart | Find Your Style</title>
+    <title>StyleKart | Fashion Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,18 +19,19 @@
         </nav>
 
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search your style...">
-            <button id="searchBtn">Search</button>
+            <input type="search" id="searchInput"
+                   placeholder="Search your style...">
+            <button id="searchBtn" type="button">Search</button>
         </div>
 
         <div class="nav-icons">
-            <a href="#products">Explore</a>
             <a href="wishlist.html">Wishlist ♥</a>
             <a href="bag.html">Bag (<span id="cartCount">0</span>)</a>
         </div>
     </header>
 
     <main>
+
         <section class="hero">
             <div class="hero-content">
                 <p class="eyebrow">THE NEW STYLE EDIT</p>
@@ -38,8 +39,11 @@
                 <p class="hero-description">
                     Everyday essentials. Fresh trends. Your own style.
                 </p>
-                <a href="#products" class="shop-btn">EXPLORE COLLECTION →</a>
+                <a href="#products" class="shop-btn">
+                    EXPLORE COLLECTION →
+                </a>
             </div>
+
             <div class="hero-label">
                 <span>STYLEKART</span>
                 <p>Wear what feels like you.</p>
@@ -60,6 +64,7 @@
         </section>
 
         <section class="products-section" id="products">
+
             <div class="section-heading">
                 <div>
                     <p class="eyebrow">CURATED FOR YOU</p>
@@ -68,251 +73,207 @@
                 <p>12 picks to refresh your wardrobe.</p>
             </div>
 
-            
-    <div class="filter-section">
-    <div class="category-filters">
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="clothing">Clothing</button>
-        <button class="filter-btn" data-category="shoes">Shoes</button>
-        <button class="filter-btn" data-category="accessories">Accessories</button>
-        <button class="filter-btn" data-category="beauty">Beauty</button>
-        <button class="filter-btn" data-category="kids">Kids</button>
-    </div>
+            <div class="filter-section">
 
-    <div class="sort-section">
-        <label for="priceSort">Sort by:</label>
-        <select id="priceSort">
-            <option value="default">Recommended</option>
-            <option value="low-high">Price: Low to High</option>
-            <option value="high-low">Price: High to Low</option>
-        </select>
-    </div>
-    </div>
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="clothing">Clothing</button>
+                    <button class="filter-btn" data-category="shoes">Shoes</button>
+                    <button class="filter-btn" data-category="accessories">Accessories</button>
+                    <button class="filter-btn" data-category="beauty">Beauty</button>
+                    <button class="filter-btn" data-category="kids">Kids</button>
+                </div>
+
+                <div class="sort-section">
+                    <label for="priceSort">Sort by:</label>
+                    <select id="priceSort">
+                        <option value="default">Recommended</option>
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <p id="noResults" class="no-results" hidden>
+                No products found. Try another search.
+            </p>
 
             <div class="product-grid">
 
-                <article class="product-card" id="clothing">
+                <article class="product-card" data-category="clothing">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="Classic T-shirt">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="Classic T-Shirt">
                         <span class="product-tag">EVERYDAY</span>
-                        <button class="wishlist-btn" aria-label="Add Classic T-Shirt to wishlist">♡</button>
+                        <button class="wishlist-btn">♡</button>
                     </div>
                     <div class="product-info">
                         <p class="product-category">MEN · CLOTHING</p>
-                        <h3>
-                      <a href="product.html?name=Classic%20T-Shirt">
-                      Classic T-Shirt
-                      </a>
-                      </h3>
+                        <h3><a href="product.html?name=Classic%20T-Shirt">Classic T-Shirt</a></h3>
                         <p class="description">Easy everyday comfort</p>
                         <p class="price">₹599</p>
                         <button class="add-btn" data-name="Classic T-Shirt" data-price="599">ADD TO BAG +</button>
                     </div>
                 </article>
 
-                <article class="product-card" id="clothing">
+                <article class="product-card" data-category="clothing">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=600&q=80" alt="Elegant dress">
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=600&q=80" alt="Elegant Dress">
                         <span class="product-tag">TRENDING</span>
-                        <button class="wishlist-btn" aria-label="Add Elegant Dress to wishlist">♡</button>
+                        <button class="wishlist-btn">♡</button>
                     </div>
                     <div class="product-info">
                         <p class="product-category">WOMEN · CLOTHING</p>
-                        <h3>
-                      <a href="product.html?name=Elegant%20Dress">
-                     Elegant Dress
-                       </a>
-                       </h3>
+                        <h3><a href="product.html?name=Elegant%20Dress">Elegant Dress</a></h3>
                         <p class="description">A look for every occasion</p>
                         <p class="price">₹1,299</p>
                         <button class="add-btn" data-name="Elegant Dress" data-price="1299">ADD TO BAG +</button>
                     </div>
                 </article>
 
-                <article class="product-card" id="shoes">
+                <article class="product-card" data-category="shoes">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Red sporty sneakers">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Sport Sneakers">
                         <span class="product-tag">BESTSELLER</span>
-                        <button class="wishlist-btn" aria-label="Add Sport Sneakers to wishlist">♡</button>
+                        <button class="wishlist-btn">♡</button>
                     </div>
                     <div class="product-info">
                         <p class="product-category">FOOTWEAR</p>
-                        <h3>
-                      <a href="product.html?name=Sport%20Sneakers">
-                     Sport Sneakers
-                       </a>
-                       </h3>
+                        <h3><a href="product.html?name=Sport%20Sneakers">Sport Sneakers</a></h3>
                         <p class="description">Made for moving around</p>
                         <p class="price">₹1,499</p>
                         <button class="add-btn" data-name="Sport Sneakers" data-price="1499">ADD TO BAG +</button>
                     </div>
                 </article>
 
-                <article class="product-card" id="accessories">
+                <article class="product-card" data-category="accessories">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80" alt="Stylish handbag">
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80" alt="Everyday Handbag">
                         <span class="product-tag">NEW PICK</span>
-                        <button class="wishlist-btn" aria-label="Add Everyday Handbag to wishlist">♡</button>
+                        <button class="wishlist-btn">♡</button>
                     </div>
                     <div class="product-info">
                         <p class="product-category">ACCESSORIES</p>
-                        <h3>
-                            <a href="product.html?name=Everyday%20Handbag">
-                            Everyday Handbag
-                            </a>
-                        </h3>
+                        <h3><a href="product.html?name=Everyday%20Handbag">Everyday Handbag</a></h3>
                         <p class="description">Carry your essentials</p>
                         <p class="price">₹899</p>
                         <button class="add-btn" data-name="Everyday Handbag" data-price="899">ADD TO BAG +</button>
                     </div>
                 </article>
 
-                <article class="product-card" id="kids">
+                <article class="product-card" data-category="kids">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=600&q=80" alt="Kids fashion outfit">
-                        <button class="wishlist-btn" aria-label="Add Kids Outfit to wishlist">♡</button>
+                        <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=600&q=80" alt="Kids Outfit">
+                        <button class="wishlist-btn">♡</button>
                     </div>
                     <div class="product-info">
                         <p class="product-category">KIDS</p>
-                        <h3>
-                            <a href="product.html?name=Kids%20Outfit">
-                            Kids Outfit
-                            </a>
-                        </h3>
+                        <h3><a href="product.html?name=Kids%20Outfit">Kids Outfit</a></h3>
                         <p class="description">Comfort for little adventures</p>
                         <p class="price">₹799</p>
                         <button class="add-btn" data-name="Kids Outfit" data-price="799">ADD TO BAG +</button>
                     </div>
                 </article>
 
-                <article class="product-card" id="beauty">
+                <article class="product-card" data-category="beauty">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" alt="Beauty essentials">
-                        <button class="wishlist-btn" aria-label="Add Beauty Essentials to wishlist">♡</button>
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" alt="Beauty Essentials">
+                        <button class="wishlist-btn">♡</button>
                     </div>
                     <div class="product-info">
                         <p class="product-category">BEAUTY</p>
-                        <h3>
-                            <a href="product.html?name=Beauty%20Essentials">
-                            Beauty Essentials
-                            </a>
-                        </h3>
+                        <h3><a href="product.html?name=Beauty%20Essentials">Beauty Essentials</a></h3>
                         <p class="description">Your daily beauty picks</p>
                         <p class="price">₹499</p>
                         <button class="add-btn" data-name="Beauty Essentials" data-price="499">ADD TO BAG +</button>
                     </div>
                 </article>
 
-                <article class="product-card" id="clothing">
+                <article class="product-card" data-category="clothing">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=600&q=80" alt="Casual fashion jacket">
-                        <button class="wishlist-btn" aria-label="Add Casual Jacket to wishlist">♡</button>
+                        <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=600&q=80" alt="Casual Jacket">
+                        <button class="wishlist-btn">♡</button>
                     </div>
                     <div class="product-info">
                         <p class="product-category">WOMEN · CLOTHING</p>
-                        <h3>
-                            <a href="product.html?name=Casual%20Jacket">
-                            Casual Jacket
-                            </a>
-                        </h3>
+                        <h3><a href="product.html?name=Casual%20Jacket">Casual Jacket</a></h3>
                         <p class="description">Layer up your look</p>
                         <p class="price">₹1,599</p>
                         <button class="add-btn" data-name="Casual Jacket" data-price="1599">ADD TO BAG +</button>
                     </div>
                 </article>
 
-                <article class="product-card" id="clothing">
+                <article class="product-card" data-category="clothing">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80" alt="Leather style jacket">
-                        <button class="wishlist-btn" aria-label="Add Urban Jacket to wishlist">♡</button>
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80" alt="Urban Jacket">
+                        <button class="wishlist-btn">♡</button>
                     </div>
                     <div class="product-info">
                         <p class="product-category">MEN · CLOTHING</p>
-                        <h3>
-                            <a href="product.html?name=Urban%20Jacket">
-                            Urban Jacket
-                            </a>
-                        </h3>
+                        <h3><a href="product.html?name=Urban%20Jacket">Urban Jacket</a></h3>
                         <p class="description">A bold finishing layer</p>
                         <p class="price">₹1,899</p>
                         <button class="add-btn" data-name="Urban Jacket" data-price="1899">ADD TO BAG +</button>
                     </div>
                 </article>
 
-                <article class="product-card" id="shoes">
+                <article class="product-card" data-category="shoes">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80" alt="Women's stylish footwear">
-                        <button class="wishlist-btn" aria-label="Add Classic Heels to wishlist">♡</button>
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80" alt="Classic Heels">
+                        <button class="wishlist-btn">♡</button>
                     </div>
                     <div class="product-info">
                         <p class="product-category">FOOTWEAR</p>
-                        <h3>
-                            <a href="product.html?name=Classic%20Heels">
-                            Classic Heels
-                            </a>
-                        </h3>
+                        <h3><a href="product.html?name=Classic%20Heels">Classic Heels</a></h3>
                         <p class="description">Dress up your outfit</p>
                         <p class="price">₹1,099</p>
                         <button class="add-btn" data-name="Classic Heels" data-price="1099">ADD TO BAG +</button>
                     </div>
                 </article>
 
-                <article class="product-card" id="accessories">
+                <article class="product-card" data-category="accessories">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Classic wristwatch">
-                        <button class="wishlist-btn" aria-label="Add Everyday Watch to wishlist">♡</button>
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Everyday Watch">
+                        <button class="wishlist-btn">♡</button>
                     </div>
                     <div class="product-info">
                         <p class="product-category">ACCESSORIES</p>
-                        <h3>
-                            <a href="product.html?name=Everyday%20Watch">
-                            Everyday Watch
-                            </a>
-                        </h3>
-                        <p class="description">A timeless finishing touch</p>
+                        <h3><a href="product.html?name=Everyday%20Watch">Everyday Watch</a></h3>
+                        <p class="description">A timeless everyday essential</p>
                         <p class="price">₹999</p>
                         <button class="add-btn" data-name="Everyday Watch" data-price="999">ADD TO BAG +</button>
                     </div>
                 </article>
 
-                <article class="product-card" id="clothing">
+                <article class="product-card" data-category="clothing">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Summer fashion top">
-                        <button class="wishlist-btn" aria-label="Add Summer Top to wishlist">♡</button>
+                        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Summer Top">
+                        <button class="wishlist-btn">♡</button>
                     </div>
                     <div class="product-info">
                         <p class="product-category">WOMEN · CLOTHING</p>
-                        <h3>
-                            <a href="product.html?name=Summer%20Top">
-                            Summer Top
-                            </a>
-                        </h3>
-                        <p class="description">Light and easy styling</p>
+                        <h3><a href="product.html?name=Summer%20Top">Summer Top</a></h3>
+                        <p class="description">A fresh summer look</p>
                         <p class="price">₹699</p>
                         <button class="add-btn" data-name="Summer Top" data-price="699">ADD TO BAG +</button>
                     </div>
                 </article>
 
-                <article class="product-card" id="clothing">
+                <article class="product-card" data-category="clothing">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80" alt="Modern street style outfit">
-                        <button class="wishlist-btn" aria-label="Add Street Style Outfit to wishlist">♡</button>
+                        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80" alt="Street Style Outfit">
+                        <button class="wishlist-btn">♡</button>
                     </div>
                     <div class="product-info">
                         <p class="product-category">WOMEN · CLOTHING</p>
-                        <h3>
-                            <a href="product.html?name=Street%20Style%20Outfit">
-                            Street Style Outfit
-                            </a>
-                        </h3>
-                        <p class="description">Stand out your way</p>
+                        <h3><a href="product.html?name=Street%20Style%20Outfit">Street Style Outfit</a></h3>
+                        <p class="description">Inspired by modern street fashion</p>
                         <p class="price">₹1,399</p>
                         <button class="add-btn" data-name="Street Style Outfit" data-price="1399">ADD TO BAG +</button>
                     </div>
                 </article>
 
             </div>
-            <p id="noResults" class="no-results" hidden>No products found. Try another search.</p>
         </section>
 
         <section class="closing-banner">
@@ -320,6 +281,7 @@
             <h2>Wear your kind of confidence.</h2>
             <a href="#products" class="shop-btn">SHOP THE EDIT</a>
         </section>
+
     </main>
 
     <footer class="footer">
